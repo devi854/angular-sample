@@ -1,0 +1,27 @@
+<main class="wrap">
+  <h1>Angular sample app</h1>
+  <p class="sub">Running on an Azure Ubuntu VM</p>
+
+  <form class="add" (ngSubmit)="addTask()">
+    <input name="task" [(ngModel)]="newTask" placeholder="Add a task" aria-label="New task" />
+    <button type="submit">Add task</button>
+  </form>
+
+  @if (tasks.length === 0) {
+    <p class="empty">No tasks yet. Add one above.</p>
+  }
+
+  <ul>
+    @for (task of tasks; track $index) {
+      <li [class.done]="task.done">
+        <label>
+          <input type="checkbox" [(ngModel)]="task.done" [name]="'t' + $index" />
+          {{ task.title }}
+        </label>
+        <button class="remove" (click)="removeTask($index)" aria-label="Remove task">Remove</button>
+      </li>
+    }
+  </ul>
+
+  <p class="count">{{ remaining }} of {{ tasks.length }} tasks left</p>
+</main>
