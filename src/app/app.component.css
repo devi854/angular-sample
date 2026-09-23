@@ -1,0 +1,12 @@
+.wrap { max-width: 560px; margin: 48px auto; padding: 0 20px; }
+h1 { margin: 0; font-size: 2rem; color: #1b3a5c; }
+.sub { margin: 4px 0 28px; color: #5a6b7d; }
+.add { display: flex; gap: 8px; margin-bottom: 20px; }
+.add input { flex: 1; padding: 10px 12px; border: 1px solid #b8c4d0; border-radius: 6px; font-size: 1rem; }
+button { padding: 10px 14px; border: 0; border-radius: 6px; background: #1b6fb8; color: #fff; font-size: 0.95rem; cursor: pointer; }
+button:focus-visible, input:focus-visible { outline: 2px solid #f0a020; outline-offset: 2px; }
+ul { list-style: none; padding: 0; margin: 0; }
+li { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #e3e8ee; }
+li.done label { text-decoration: line-through; color: #8a97a5; }
+.remove { background: transparent; color: #b83a2e; padding: 4px 8px; }
+.empty, .count { color: #5a6b7d; }
